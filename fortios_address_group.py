@@ -194,11 +194,7 @@ def main():
         module.fail_json(msg=msg)
    
     #define device
-    f = FortiOS( module.params['host'], 
-        username=module.params['username'], 
-        password=module.params['password'], 
-        timeout=module.params['username'],
-        vdom=module.params['vdom'])
+    f = FortiOS( module.params['host'],username=module.params['username'],password=module.params['password'],vdom=None)
     
     path = 'firewall addrgrp'
 
